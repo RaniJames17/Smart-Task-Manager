@@ -164,7 +164,14 @@ function App() {
               </select>
             </div>
             <TaskInput />
-            <TaskList sort={sort} />
+            <div style={{
+  maxHeight: 400,
+  overflowY: "auto",
+  paddingRight: 8,
+  scrollbarWidth: "thin" // For Firefox
+}}>
+  <TaskList sort={sort} />
+</div>
           </div>
           {/* Right: Timer and Stats */}
           <div style={{ flex: 1, minWidth: 300, display: "flex", flexDirection: "column", gap: "1.5rem" }}>
